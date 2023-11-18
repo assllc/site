@@ -3,7 +3,7 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 
-import LogoImage from "images/logo-light.svg";
+import LogoImage from "images/fav4.png";
 import { ReactComponent as FacebookIcon } from "images/facebook-icon.svg";
 import { ReactComponent as TwitterIcon } from "images/twitter-icon.svg";
 import { ReactComponent as YoutubeIcon } from "images/youtube-icon.svg";
@@ -142,11 +142,11 @@ export default () => {
         <ThreeColRow>
           <LogoContainer>
             <LogoImg src={LogoImage} />
-            <LogoText>Treact Inc.</LogoText>
+            <LogoText>Agile Software Solutions</LogoText>
           </LogoContainer>
-          <CopywrightNotice>&copy; 2018 Treact Inc. All Rights Reserved.</CopywrightNotice>
+          <CopywrightNotice>&copy; 2024 Agile Software Solutions LLC All Rights Reserved.</CopywrightNotice>
           <SocialLinksContainer>
-            <SocialLink href="https://facebook.com">
+            {/* <SocialLink href="https://facebook.com">
               <FacebookIcon />
             </SocialLink>
             <SocialLink href="https://twitter.com">
@@ -154,7 +154,7 @@ export default () => {
             </SocialLink>
             <SocialLink href="https://youtube.com">
               <YoutubeIcon />
-            </SocialLink>
+            </SocialLink> */}
           </SocialLinksContainer>
         </ThreeColRow>
       </Content>

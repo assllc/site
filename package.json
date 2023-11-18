@@ -27,7 +27,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "yarn build && netlify deploy --prod --dir=build"
+    "deploy": "yarn build && netlify deploy --prod --dir=build",
+    "sync": "browser-sync start --server --files \"**/*\\"
   },
   "eslintConfig": {
     "extends": "react-app",

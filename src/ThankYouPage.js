@@ -10,7 +10,7 @@ import { LogoLink } from "components/headers/light.js";
 import { SectionHeading as HeadingBase } from "components/misc/Headings";
 import { SectionDescription as DescriptionBase } from "components/misc/Typography";
 
-import logo from "images/logo.svg";
+import logo from "images/fav4.png";
 
 /* Hero */
 const Row = tw.div`flex`;
@@ -47,7 +47,7 @@ export default () => {
           <NavRow>
             <LogoLink href="/">
               <img src={logo} alt="" />
-              Treact
+              Agile Software Solutions
             </LogoLink>
             <div tw="flex flex-col lg:flex-row items-center">
               <NavLink target="_blank" href="https://owaiskhan.me/post/free-tailwindcss-react-ui-kit">
