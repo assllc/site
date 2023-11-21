@@ -7,6 +7,7 @@ import Home from "pages/Home.js";
 /* Inner Pages */
 import AboutUsPage from "pages/AboutUs.js";
 import ContactUsPage from "pages/ContactUs.js";
+import WhatWeOfferPage from "pages/WhatWeOfferPage.js";
 
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -20,7 +21,7 @@ export default function App() {
           <Route path="/" element={<Home/>} />
           <Route path="/about" element={<AboutUsPage/>} />
           <Route path="/contact" element={<ContactUsPage/>} />
-          {/* <Route path="/product" element={<Product/>} /> */}
+          <Route path="/product" element={<WhatWeOfferPage/>} />
         </Routes>
       </Router>
     </>

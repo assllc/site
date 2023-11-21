@@ -13,6 +13,7 @@ import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
 const Header = tw.header`
   flex justify-between items-center
   max-w-screen-xl mx-auto
+  z-50
 `;
 
 export const NavLinks = tw.div`inline-block`;
@@ -46,14 +47,14 @@ export const NavToggle = tw.button`
   lg:hidden z-20 focus:outline-none hocus:text-primary-500 transition duration-300
 `;
 export const MobileNavLinks = motion(styled.div`
-  ${tw`lg:hidden z-10 fixed top-0 inset-x-0 mx-4 my-6 p-8 border text-center rounded-lg text-gray-900 bg-white`}
+  ${tw`lg:hidden z-10 fixed top-0 inset-x-0 mx-4 my-6 p-8 border text-center rounded-lg text-gray-900 bg-gray-400`}
   ${NavLinks} {
     ${tw`flex flex-col items-center`}
   }
 `);
 
 export const DesktopNavLinks = tw.nav`
-  hidden lg:flex flex-1 justify-between items-center
+  hidden lg:flex flex-1 justify-between items-center border-b border-gray-500
 `;
 
 export default ({ roundedHeaderButton = false, logoLink, links, className, collapseBreakpointClass = "lg" }) => {
@@ -71,11 +72,19 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
    * If you manipulate links here, all the styling on the links is already done for you. If you pass links yourself though, you are responsible for styling the links or use the helper styled components that are defined here (NavLink)
    */
   const defaultLinks = [
-    <NavLinks key={1}>
-      <NavLink href="/">Home</NavLink>
-      <NavLink href="/product">What We Offer</NavLink>
-      <NavLink href="/about">About</NavLink>
-      <NavLink href="/contact">Contact Us</NavLink>
+    <NavLinks key={1} >
+      <NavLink href="/" tw="text-xl">
+        Home
+      </NavLink>
+      <NavLink href="/product" tw="text-xl">
+        What We Offer
+      </NavLink>
+      <NavLink href="/about" tw="text-xl">
+        About
+      </NavLink>
+      <NavLink href="/contact" tw="text-xl">
+        Contact Us
+      </NavLink>
     </NavLinks>
   ];
 

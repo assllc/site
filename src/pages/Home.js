@@ -22,7 +22,7 @@ import { ReactComponent as MoneyIcon } from "feather-icons/dist/icons/dollar-sig
 export default () => {
   const Subheading = tw.span`uppercase tracking-widest font-bold text-primary-500`;
   const HighlightedText = tw.span`text-primary-500`;
-  const Container = tw.div`overflow-hidden`;
+  const Container = tw.div`overflow-hidden bg-gray-300`;
 
   return (
     <Container>

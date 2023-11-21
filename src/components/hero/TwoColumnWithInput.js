@@ -6,7 +6,7 @@ import { css } from "styled-components/macro";
 
 import Header from "../headers/light.js";
 
-import { ReactComponent as SvgDecoratorBlob1 } from "../../images/svg-decorator-blob-1.svg";
+// import { ReactComponent as SvgDecoratorBlob1 } from "../../images/svg-decorator-blob-1.svg";
 import DesignIllustration from "../../images/design-illustration-2.svg";
 import CustomersLogoStripImage from "../../images/customers-logo-strip.png";
 
@@ -31,9 +31,9 @@ const Actions = styled.div`
 const IllustrationContainer = tw.div`flex justify-center lg:justify-end items-center`;
 
 // Random Decorator Blobs (shapes that you see in background)
-const DecoratorBlob1 = styled(SvgDecoratorBlob1)`
-  ${tw`pointer-events-none opacity-5 absolute left-0 bottom-0 h-64 w-64 transform -translate-x-2/3 -z-10`}
-`;
+// const DecoratorBlob1 = styled(SvgDecoratorBlob1)`
+//   ${tw`pointer-events-none opacity-5 absolute left-0 bottom-0 h-64 w-64 transform -translate-x-2/3 -z-10`}
+// `;
 
 const CustomersLogoStrip = styled.div`
   ${tw`mt-12 lg:mt-20`}
@@ -69,12 +69,12 @@ export default ({ roundedHeaderButton }) => {
             </CustomersLogoStrip>
           </LeftColumn>
           <RightColumn>
-            <IllustrationContainer>
+            {/* <IllustrationContainer>
               <img tw="min-w-0 w-full max-w-lg xl:max-w-3xl" src={DesignIllustration} alt="Design Illustration" />
-            </IllustrationContainer>
+            </IllustrationContainer> */}
           </RightColumn>
         </TwoColumn>
-        <DecoratorBlob1 />
+        {/* <DecoratorBlob1 /> */}
       </Container>
     </>
   );
