@@ -6,9 +6,10 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { ReactComponent as PlusIcon } from "feather-icons/dist/icons/plus.svg";
 import { ReactComponent as MinusIcon } from "feather-icons/dist/icons/minus.svg";
+import Database from "images/undraw_visionary_technology_re_jfp7.svg";
 
 const Container = tw.div`relative`;
-const Content = tw.div`max-w-screen-xl mx-auto py-16 lg:py-20`;
+const Content = tw.div`max-w-screen-xl mx-auto ml-40 py-16 lg:py-20`;
 
 const TwoColumn = tw.div`flex`;
 const Column = tw.div``;
@@ -39,11 +40,11 @@ const Answer = motion(tw.dd`pointer-events-none text-sm sm:text-base leading-rel
 
 export default ({
   subheading = "",
-  heading = "Questions",
-  description = "Here are some frequently asked questions about our hotels from our loving customers. Should you have any other questions, feel free to reach out via the contact form below.",
-  imageSrc = "https://images.unsplash.com/photo-1579427421635-a0015b804b2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80",
-  imageContain = false,
-  imageShadow = true,
+  heading = "Database Design",
+  description = "Data drives revenue. A well designed database gives a company the ability to organize, track and audit their data. Want to track your monthly spending? How about how long it takes one of your users to finish steps 1-3 in your questionairre? Whatever your business does, a good database will help you do it better.",
+  imageSrc = Database,
+  imageContain = true,
+  imageShadow = false,
   faqs = null
 }) => {
   /*
@@ -52,24 +53,24 @@ export default ({
    */
   const defaultFaqs = [
     {
-      question: "Is lunch provided free of cost ?",
+      question: "Architecture",
       answer:
-        "Yes, it is, if you have a membership with us. Otherwise it is charged as per the menu. Some limits do apply as to how much items can be included in your lunch. This limit is enough for any one person and merely exists to discourage abusal of the system."
+        "A custom databse ensures that your company's data has the best place to live. We create custom databases that are specifically designed to hold the information that keeps your business moving. We handle all the design and devlopment to provide an end result that leaves your data organized and secure.  "
     },
     {
-      question: "Do you have 2 Bedroom suites ?",
+      question: "Migration",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "It's always best to keep track of the changes when it comes to making updates to an existing database. We use a migration system to implement any changes within a database or its tables. This makes sure that your database schema is always in sync with your application."
     },
     {
-      question: "Are Wi-Fi costs included in the price ?",
+      question: "SQL Optimization",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "There's nothing worse than a beautiful UI application that has to wait for the data it needs. We optimize existing SQL queries to make sure all of your users get the best experience possible."
     },
     {
-      question: "Where can I reach you for support ?",
+      question: "Custom SQL Queries",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "SQL is a powerful tool allowing us to create incredible applications. With a custom query, you get the data you want where you want it and when you want it."
     }
   ];
 
@@ -83,7 +84,7 @@ export default ({
   };
 
   return (
-    <Container>
+    <Container id="databaseService">
       <Content>
         <TwoColumn>
           <Column tw="hidden lg:block w-5/12 flex-shrink-0">

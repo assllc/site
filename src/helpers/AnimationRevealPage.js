@@ -43,7 +43,7 @@ function AnimatedSlideInComponent({ direction = "left", offset = 30, children })
             x: inView && 0
           }
         }}
-        transition={{ type: "spring", damping: 19 }}
+        transition={{ type: "spring", damping: 30 }}
       >
         {children}
       </motion.section>
@@ -52,7 +52,7 @@ function AnimatedSlideInComponent({ direction = "left", offset = 30, children })
 }
 
 export default props => (
-  <StyledDiv className="App">
+  <StyledDiv className="App" tw="mt-0 mb-0">
     <AnimationReveal {...props} />
   </StyledDiv>
 );

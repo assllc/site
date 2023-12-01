@@ -7,10 +7,12 @@ import Header from "components/headers/light.js";
 import Footer from "components/footers/FiveColumnWithBackground";
 import Hero from "components/hero/TwoColumnWithFeaturesAndTestimonial";
 import MainFeature1 from "components/features/ThreeColWithSideImageWithPrimaryBackground";
-// import MainFeature2 from "components/features/TwoColSingleFeatureWithStats.js";
-// import MainFeature3 from "components/features/TwoColSingleFeatureWithStats2.js";
+import DatabaseService from "components/faqs/DatabaseService";
+import SoftwareService from "components/faqs/SoftwareService";
+import EventDrivenService from "components/faqs/EventDrivenService";
+import DevOpsService from "components/faqs/DevOpsService";
+import StaticContainer from "helpers/StaticContainer";
 import Features from "components/features/ThreeColSimple.js";
-// import Features from "components/features/ThreeColWithSideImage.js";
 import TeamCardGrid from "components/cards/ProfileThreeColGrid.js";
 
 import SupportIconImage from "images/support-icon.svg";
@@ -18,13 +20,24 @@ import ShieldIconImage from "images/shield-icon.svg";
 import CustomerLoveIconImage from "images/simple-icon.svg";
 
 const Subheading = tw.span`uppercase tracking-wider text-sm`;
+
 export default () => {
+  const Container = tw.div`overflow-hidden bg-gray-100`;
   return (
-    <AnimationRevealPage>
-      <Hero />
-      <MainFeature1 />
-      
-      <Footer />
-    </AnimationRevealPage>
+    <Container>
+      <StaticContainer>
+        <Hero />
+        <MainFeature1 />
+      </StaticContainer>
+      <AnimationRevealPage>
+        <DatabaseService />
+        <SoftwareService />
+        <EventDrivenService />
+        <DevOpsService />
+      </AnimationRevealPage>
+      <StaticContainer>
+        <Footer />
+      </StaticContainer>
+    </Container>
   );
 };

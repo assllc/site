@@ -61,7 +61,7 @@ export default ({
   cards = null,
   heading = "Core Competencies",
   subheading = "",
-  description = "We specialize in a wide array of custom products, using every tool at our disposal to solve your custom software needs."
+  description = "We specialize in a wide array of custom products, using every tool at our disposal to meet your custom software needs."
 }) => {
   /*
    * This componets has an array of object denoting the cards defined below. Each object in the cards array can have the key (Change it according to your need, you can also add more objects to have more cards in this feature component) or you can directly pass this using the cards prop:
@@ -97,6 +97,31 @@ export default ({
   ];
 
   if (!cards) cards = defaultCards;
+
+  function handleClick(string) {
+    let element;
+    switch (string) {
+      case "DevOps":
+        element = "devOpsService";
+        document.getElementById(element).scrollIntoView({ behavior: "smooth" });
+        break;
+      case "Event Driven Systems":
+        element = "eventDrivenService";
+        document.getElementById(element).scrollIntoView({ behavior: "smooth" });
+        break;
+      case "Custom Software":
+        element = "softwareService";
+        // document.getElementById(element).scrollTo({top: 1, behavior: "smooth" });
+        document.getElementById(element).scrollIntoView({ behavior: "smooth" });
+        break;
+      case "Database Design":
+        element = "databaseService";
+        document.getElementById(element).scrollIntoView({ behavior: "smooth" });
+        break;
+    }
+  }
+
+// onClick={e => handleClick(card.title)} tw="cursor-pointer"
 
   return (
     <Container>
