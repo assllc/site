@@ -12,57 +12,58 @@ import Features from "components/features/ThreeColSimple.js";
 // import Features from "components/features/ThreeColWithSideImage.js";
 import TeamCardGrid from "components/cards/ProfileThreeColGrid.js";
 
-import SupportIconImage from "images/support-icon.svg";
-import ShieldIconImage from "images/shield-icon.svg";
-import CustomerLoveIconImage from "images/simple-icon.svg";
+import Integrity from "images/handshake-svgrepo-com.svg";
+import Transparencey from "images/open-svgrepo-com.svg";
+import Efficiency from "images/speedometer-svgrepo-com.svg";
+import AskingQuestions from "images/question-mark-svgrepo-com.svg";
+import StaticContainer from "helpers/StaticContainer";
 
 const Subheading = tw.span`uppercase tracking-wider text-sm`;
 export default () => {
+  const Container = tw.div`overflow-hidden bg-gray-100`;
   return (
+    <Container>
+    <StaticContainer>
+      <Header />  
+    </StaticContainer>
     <AnimationRevealPage>
-      <Header />
       <MainFeature1
-        subheading={<Subheading>About Treact</Subheading>}
-        heading="We are a modern design agency."
+        subheading={<Subheading>Our Mission</Subheading>}
+        heading="Providing the best experience for our customers"
         buttonRounded={false}
-        primaryButtonText="See Portfolio"
-        imageSrc="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80"
-      />
-      <MainFeature1
-        subheading={<Subheading>Our Vision</Subheading>}
-        heading="We aim to disrupt the design space."
-        buttonRounded={false}
-        primaryButtonText="Contact Us"
-        imageSrc="https://images.unsplash.com/3/doctype-hi-res.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=768&q=80"
-        textOnLeft={false}
+        primaryButtonText="Let's Chat"
       />
       <Features
-        subheading={<Subheading>Our Values</Subheading>}
-        heading="We follow these."
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        subheading={<Subheading>Guiding Principles</Subheading>}
+        description="Staying true to what we believe in allows us to deliver the best customer experience to all of our clients."
         cards={[
           {
-            imageSrc: SupportIconImage,
-            title: "24/7 Support",
-            description: "Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport"
+            imageSrc: Integrity,
+            title: "Integrity",
+            description: "We measure our success by the trust and relationships we build with our customers."
           },
           {
-            imageSrc: ShieldIconImage,
-            title: "Strong Teams",
-            description: "Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport"
+            imageSrc: Transparencey,
+            title: "Transparency",
+            description: "No customer will be left in the dark. Our Statement of Work will be the guiding document though the duration of the process."
           },
           {
-            imageSrc: CustomerLoveIconImage,
-            title: "Customer Satisfaction",
-            description: "Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport"
+            imageSrc: Efficiency,
+            title: "Efficiency",
+            description: "Our unique business organization allows us to cut all slack from the process, while remaining adaptable to new challenges."
+          },
+          {
+            imageSrc: AskingQuestions,
+            title: "Asking Questions",
+            description: "No one knows your needs better than you do. That’s why we’ll work to understand them better than anyone else."
           },
         ]}
         linkText=""
       />
-      <TeamCardGrid 
-        subheading={<Subheading>Our Team</Subheading>}
-      />
-      <Footer />
-    </AnimationRevealPage>
+      </AnimationRevealPage>
+      <StaticContainer>
+        <Footer />
+      </StaticContainer>
+      </Container>
   );
 };

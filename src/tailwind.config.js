@@ -2,6 +2,7 @@ module.exports = {
   prefix: '',
   important: false,
   separator: ':',
+  content: ['./src/**/*.{html,js}'],
   theme: {
     screens: {
       sm: '640px',

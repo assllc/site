@@ -15,19 +15,17 @@ const Text = tw.h5`text-gray-100 text-2xl sm:text-3xl font-bold`;
 const LinksContainer = tw(ColumnContainer)`flex justify-center lg:justify-end mt-6 lg:mt-0 flex-col sm:flex-row`;
 
 const Link = tw.a`w-full sm:w-auto text-sm sm:text-base px-6 py-3 sm:px-8 sm:py-4 lg:px-10 lg:py-5 mt-4 first:mt-0 sm:mt-0 sm:mr-8 sm:last:mr-0 rounded-full font-bold border border-transparent tracking-wide transition duration-300 focus:outline-none focus:shadow-outline`;
-const PrimaryLink = tw(Link)`bg-red-500 text-gray-100 shadow-lg hocus:bg-red-600 hocus:text-gray-200`;
+const PrimaryLink = tw(Link)`bg-red-500 text-gray-100 shadow-lg hocus:bg-red-600 hocus:text-gray-200 w-56 text-center`;
 
-const SecondaryLink = tw(Link)`text-gray-100 border-gray-500 hover:bg-gray-100 hover:text-primary-500 hover:border-primary-500`;
 
 const DecoratorBlobContainer = tw.div`absolute inset-0 overflow-hidden rounded-lg`
-const DecoratorBlob1 = tw(SvgDecoratorBlob1)`absolute bottom-0 left-0 w-80 h-80 transform -translate-x-20 translate-y-32 text-primary-700 opacity-50`
-const DecoratorBlob2 = tw(SvgDecoratorBlob1)`absolute top-0 right-0 w-80 h-80 transform  translate-x-20 -translate-y-64 text-primary-700 opacity-50`
+const DecoratorBlob2 = tw(SvgDecoratorBlob1)`absolute bottom-0 right-0 mx-auto h-0 w-0 border-r-[525px] border-b-[555px] 
+border-l-[525px] border-solid border-r-transparent
+border-l-transparent border-b-[#155983] -mr-80`
 export default ({
-  text = "Developers all over the world are happily using Treact.",
-  primaryLinkText = "Get Started",
-  primaryLinkUrl = "http://timerse.com",
-  secondaryLinkText = "Contact Us",
-  secondaryLinkUrl = "http://google.com",
+  text = "Our developers are ready to get started. Are you?",
+  primaryLinkText = "I'm Ready",
+  primaryLinkUrl = "/contact",
   pushDownFooter = true
 }) => {
   return (
@@ -40,11 +38,9 @@ export default ({
           </TextContainer>
           <LinksContainer>
             <PrimaryLink href={primaryLinkUrl}>{primaryLinkText}</PrimaryLink>
-            <SecondaryLink href={secondaryLinkUrl}>{secondaryLinkText}</SecondaryLink>
           </LinksContainer>
         </Row>
         <DecoratorBlobContainer>
-          <DecoratorBlob1/>
           <DecoratorBlob2/>
         </DecoratorBlobContainer>
       </PrimaryBackgroundContainer>

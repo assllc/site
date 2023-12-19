@@ -10,7 +10,7 @@ import { ReactComponent as YoutubeIcon } from "images/youtube-icon.svg";
 import { ReactComponent as SvgDecoratorBlob1 } from "images/svg-decorator-blob-9.svg";
 import { TfiLinkedin } from "react-icons/tfi";
 
-const Container = tw.div`relative bg-primary-900 text-gray-100 -mb-8 -mx-8 px-8 py-20 lg:py-24 z-0`;
+const Container = tw.div`relative bg-primary-900 text-gray-100 -mb-8 -mx-8 px-8 py-8 lg:py-12 z-0`;
 const Content = tw.div`max-w-screen-xl mx-auto relative z-10`;
 const FiveColumns = tw.div`flex flex-wrap text-center sm:text-left justify-center sm:justify-start md:justify-between -mt-12`;
 
@@ -22,7 +22,7 @@ const LinkList = tw.ul`mt-6 text-sm font-medium`;
 const LinkListItem = tw.li`mt-3`;
 const Link = tw.a`border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300`;
 
-const Divider = tw.div`my-16 border-b-2 border-primary-400 w-full`;
+const Divider = tw.div`my-8 border-b-2 border-primary-400 w-full`;
 
 const ThreeColRow = tw.div`flex flex-col md:flex-row items-center justify-between`;
 
@@ -44,99 +44,28 @@ export default () => {
   return (
     <Container>
       <Content>
-        <FiveColumns>
-          <Column>
-            <ColumnHeading>Main</ColumnHeading>
-            <LinkList>
-              <LinkListItem>
-                <Link href="#">Blog</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">FAQs</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Support</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">About Us</Link>
-              </LinkListItem>
-            </LinkList>
-          </Column>
-          <Column>
-            <ColumnHeading>Product</ColumnHeading>
-            <LinkList>
-              <LinkListItem>
-                <Link href="#">Log In</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Personal</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Business</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Team</Link>
-              </LinkListItem>
-            </LinkList>
-          </Column>
-          <Column>
-            <ColumnHeading>Press</ColumnHeading>
-            <LinkList>
-              <LinkListItem>
-                <Link href="#">Logos</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Events</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Stories</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Office</Link>
-              </LinkListItem>
-            </LinkList>
-          </Column>
-          <Column>
-            <ColumnHeading>Team</ColumnHeading>
-            <LinkList>
-              <LinkListItem>
-                <Link href="#">Career</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Founders</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Culture</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Onboarding</Link>
-              </LinkListItem>
-            </LinkList>
-          </Column>
-          <Column>
-            <ColumnHeading>Legal</ColumnHeading>
-            <LinkList>
-              <LinkListItem>
-                <Link href="#">GDPR</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Privacy Policy</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Terms of Service</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Disclaimer</Link>
-              </LinkListItem>
-            </LinkList>
-          </Column>
-        </FiveColumns>
-        <Divider />
         <ThreeColRow>
           <LogoContainer>
             <LogoImg src={LogoImage} />
             <LogoText>Agile Software Solutions</LogoText>
           </LogoContainer>
+          <ul tw="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+                    <li>
+                        <a href="/" tw="hover:underline m-4 md:m-6">Home</a>
+                    </li>
+                    <li>
+                        <a href="/product" tw="hover:underline m-4 md:m-6">What We Offer</a>
+                    </li>
+                    <li>
+                        <a href="/about" tw="hover:underline m-4 md:m-6">About</a>
+                    </li>
+                    <li>
+                        <a href="/contact" tw="hover:underline">Contact Us</a>
+                    </li>
+                </ul>
+        </ThreeColRow>
+          <Divider />
+        <ThreeColRow>
           <CopywrightNotice>&copy; 2024 Agile Software Solutions LLC All Rights Reserved.</CopywrightNotice>
           <SocialLinksContainer>
             <SocialLink href="https://www.linkedin.com/company/agile-software-solutions/">
@@ -152,7 +81,7 @@ export default () => {
               <YoutubeIcon />
             </SocialLink> */}
           </SocialLinksContainer>
-        </ThreeColRow>
+          </ThreeColRow>
       </Content>
     </Container>
   );

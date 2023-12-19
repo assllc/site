@@ -3,8 +3,9 @@ import tw from "twin.macro";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import StaticContainer from "helpers/StaticContainer";
-import Hero from "components/hero/TwoColumnWithInput.js";
-import Features from "components/features/ThreeColWithSideImage.js";
+// import Hero from "components/hero/TwoColumnWithInput.js";
+import Hero from "components/hero/TwoColumnWithPrimaryBackground";
+import Features from "components/features/WhatWeOfferHomePage.js";
 import MainFeature from "components/features/TwoColWithButton.js";
 import MainFeature2 from "components/features/TwoColWithTwoHorizontalFeaturesAndButton.js";
 import FeatureWithSteps from "components/features/TwoColWithSteps.js";
@@ -17,12 +18,19 @@ import heroScreenshotImageSrc from "images/hero-screenshot-1.png";
 import macHeroScreenshotImageSrc from "images/hero-screenshot-2.png";
 import prototypeIllustrationImageSrc from "images/prototype-illustration.svg";
 import { ReactComponent as BriefcaseIcon } from "feather-icons/dist/icons/briefcase.svg";
-import { ReactComponent as MoneyIcon } from "feather-icons/dist/icons/dollar-sign.svg";
+import { ReactComponent as StarIcon } from "images/star-svgrepo-com (2).svg";
+import PairProgramming from "images/undraw_pair_programming_re_or4x.svg";
+
+import Database from "images/database-svgrepo-com.svg";
+import CustomCode from "images/custom-coding-svgrepo-com.svg";
+import Webhook from "images/webhook-svgrepo-com.svg";
+import Pipeline from "images/rocket-2-svgrepo-com.svg";
 
 export default () => {
   const Subheading = tw.span`uppercase tracking-widest font-bold text-primary-500`;
   const HighlightedText = tw.span`text-primary-500`;
   const Container = tw.div`overflow-hidden bg-gray-100`;
+  const heading = <>This is what <span tw="text-primary-500">we're good</span> at</>;
 
   return (
     <Container>
@@ -30,155 +38,56 @@ export default () => {
         <Hero roundedHeaderButton={true} />
       </StaticContainer>
       <AnimationRevealPage>
-        <Features
-          subheading={<Subheading>Features</Subheading>}
-          heading={
-            <>
-              We have Amazing <HighlightedText>Service.</HighlightedText>
-            </>
-          }
-        />
-        <MainFeature
-          subheading={<Subheading>Quality Work</Subheading>}
-          imageSrc={heroScreenshotImageSrc}
-          imageBorder={true}
-          imageDecoratorBlob={true}
-        />
-        <FeatureWithSteps
-          subheading={<Subheading>STEPS</Subheading>}
-          heading={
-            <>
-              Easy to <HighlightedText>Get Started.</HighlightedText>
-            </>
-          }
-          textOnLeft={false}
-          imageSrc={macHeroScreenshotImageSrc}
-          imageDecoratorBlob={true}
-          decoratorBlobCss={tw`xl:w-40 xl:h-40 opacity-15 -translate-x-1/2 left-1/2`}
-        />
+      <Features
+        subheading={<Subheading>What We Offer</Subheading>}
+        heading= {heading}
+        description="Ultimately, we specialize in creative problem solving. These are only the most common solutions we offer, try to find a problem we can't solve."
+        cards={[
+          {
+            imageSrc: Database,
+            title: "Database Design",
+            description: "We know how to organize your data in order to optimize your business's workflows."
+          },
+          {
+            imageSrc: CustomCode,
+            title: "Custom Software",
+            description: "Your business's challenges are unique to you, the solution is unique to match."
+          },
+          {
+            imageSrc: Webhook,
+            title: "Event Driven Systems",
+            description: "Dynamic integrations to meet the complex needs of an ever-changing landscape." 
+          },
+          {
+            imageSrc: Pipeline,
+            title: "DevOps",
+            description: "We'll handle program management. Experts in agile development, It's in our name." 
+          },
+        ]}
+        linkText=""
+      />
         <MainFeature2
-          subheading={<Subheading>VALUES</Subheading>}
+          subheading={<Subheading>ABOUT</Subheading>}
           heading={
             <>
-              We Always Abide by Our <HighlightedText>Principles.</HighlightedText>
+              Who we are and <HighlightedText> why we do it.</HighlightedText>
             </>
           }
-          imageSrc={prototypeIllustrationImageSrc}
+          description="We're a small team of passionate developers, fueled with experience and driven by our desire to see you win. We know what it's like to have to use an imcomplete product or service. We want to get you back to what you do best."
+          imageSrc={PairProgramming}
           showDecoratorBlob={false}
           features={[
             {
-              Icon: MoneyIcon,
-              title: "Affordable",
-              description: "We promise to offer you the best rate we can - at par with the industry standard.",
+              Icon: StarIcon,
+              title: "Values Driven",
+              description: "Our values are the foundation of how we do business.",
               iconContainerCss: tw`bg-green-300 text-green-800`
             },
             {
               Icon: BriefcaseIcon,
-              title: "Professionalism",
-              description: "We assure you that our templates are designed and created by professional designers.",
-              iconContainerCss: tw`bg-red-300 text-red-800`
-            }
-          ]}
-        />
-        <Pricing
-          subheading={<Subheading>Pricing</Subheading>}
-          heading={
-            <>
-              Reasonable & Flexible <HighlightedText>Plans.</HighlightedText>
-            </>
-          }
-          plans={[
-            {
-              name: "Personal",
-              price: "$17.99",
-              duration: "Monthly",
-              mainFeature: "For Individuals",
-              features: ["30 Templates", "7 Landing Pages", "12 Internal Pages", "Basic Assistance"]
-            },
-            {
-              name: "Business",
-              price: "$37.99",
-              duration: "Monthly",
-              mainFeature: "For Small Businesses",
-              features: ["60 Templates", "15 Landing Pages", "22 Internal Pages", "Priority Assistance"],
-              featured: true
-            },
-            {
-              name: "Enterprise",
-              price: "$57.99",
-              duration: "Monthly",
-              mainFeature: "For Large Companies",
-              features: ["90 Templates", "27 Landing Pages", "37 Internal Pages", "Personal Assistance"]
-            }
-          ]}
-        />
-        <Testimonial
-          subheading={<Subheading>Testimonials</Subheading>}
-          heading={
-            <>
-              Our Clients <HighlightedText>Love Us.</HighlightedText>
-            </>
-          }
-          testimonials={[
-            {
-              stars: 5,
-              profileImageSrc:
-                "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3.25&w=512&h=512&q=80",
-              heading: "Amazing User Experience",
-              quote:
-                "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
-              customerName: "Charlotte Hale",
-              customerTitle: "Director, Delos Inc."
-            },
-            {
-              stars: 5,
-              profileImageSrc:
-                "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=512&h=512&q=80",
-              heading: "Love the Developer Experience and Design Principles !",
-              quote:
-                "Sinor Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-              customerName: "Adam Cuppy",
-              customerTitle: "Founder, EventsNYC"
-            }
-          ]}
-        />
-        <FAQ
-          subheading={<Subheading>FAQS</Subheading>}
-          heading={
-            <>
-              You have <HighlightedText>Questions ?</HighlightedText>
-            </>
-          }
-          faqs={[
-            {
-              question: "Are all the templates easily customizable ?",
-              answer:
-                "Yes, they all are. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-            },
-            {
-              question: "How long do you usually support an standalone template for ?",
-              answer:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-            },
-            {
-              question: "What kind of payment methods do you accept ?",
-              answer:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-            },
-            {
-              question: "Is there a subscribption service to get the latest templates ?",
-              answer:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-            },
-            {
-              question: "Are the templates compatible with the React ?",
-              answer:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-            },
-            {
-              question: "Do you really support Internet Explorer 11 ?",
-              answer:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+              title: "Unique Model",
+              description: "Our network of developers lets us get you what you need, when you need it.",
+              iconContainerCss: tw`bg-primary-200 text-primary-800`
             }
           ]}
         />

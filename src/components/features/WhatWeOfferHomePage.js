@@ -85,9 +85,11 @@ export default ({
   return (
     <Container>
       <ContentWithPaddingXl>
+        <a href="/product">
         {subheading && <Subheading>{subheading}</Subheading>}
         {heading && <Heading>{heading}</Heading>}
         {description && <Description>{description}</Description>}
+        </a>
         <ThreeColumnContainer>
           {cards.map((card, i) => (
             <Column key={i}>
