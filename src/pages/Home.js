@@ -73,7 +73,7 @@ export default () => {
               Who we are and <HighlightedText> why we do it.</HighlightedText>
             </>
           }
-          description="We're a small team of passionate developers, fueled with experience and driven by our desire to see you win. We know what it's like to have to use an imcomplete product or service. We want to get you back to what you do best."
+          description="We're a small team of passionate developers, fueled with experience and driven by our desire to see you win. We know what it's like to have to use an incomplete product or service. We want to get you back to what you do best."
           imageSrc={PairProgramming}
           showDecoratorBlob={false}
           features={[
