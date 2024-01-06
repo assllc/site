@@ -41,7 +41,7 @@ const Answer = motion(tw.dd`pointer-events-none text-sm sm:text-base leading-rel
 export default ({
   subheading = "",
   heading = "Database Design",
-  description = "Data drives revenue. A well designed database gives a company the ability to organize, track and audit their data. Want to track your monthly spending? How about how long it takes one of your users to finish steps 1-3 in your questionairre? Whatever your business does, a good database will help you do it better.",
+  description = "Data drives revenue. A well designed database gives a company the ability to organize, track, and audit their data. Want to track your monthly spending? How about how long it takes one of your users to finish steps 1-3 in your questionairre? Whatever your business does, a good database will help you do it better.",
   imageSrc = Database,
   imageContain = true,
   imageShadow = false,
