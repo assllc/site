@@ -9,7 +9,6 @@ import { ReactComponent as ArrowRightIcon } from "images/arrow-right-icon.svg";
 import SupportIconImage from "images/support-icon.svg";
 import ShieldIconImage from "images/shield-icon.svg";
 import CustomizeIconImage from "images/customize-icon.svg";
-import { ReactComponent as SvgDecoratorBlob3 } from "images/svg-decorator-blob-3.svg";
 
 const Heading = tw(SectionHeading)``;
 const Subheading = tw(SubheadingBase)`text-center mb-3`;
@@ -22,7 +21,7 @@ const Column = styled.div`
 `;
 
 const Card = styled.a`
-  ${tw`flex flex-col items-center text-center h-full mx-20 px-4 py-8 rounded transition-transform duration-300`}
+  ${tw`flex flex-col items-center text-center h-full sm:mx-10 md:mx-20 px-4 py-8 rounded transition-transform duration-300`}
   .imageContainer {
     ${tw`text-center rounded-full p-4 bg-gray-200`}
     img {

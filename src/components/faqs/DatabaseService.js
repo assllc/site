@@ -9,7 +9,7 @@ import { ReactComponent as MinusIcon } from "feather-icons/dist/icons/minus.svg"
 import Database from "images/undraw_visionary_technology_re_jfp7.svg";
 
 const Container = tw.div`relative`;
-const Content = tw.div`max-w-screen-xl mx-auto ml-40 py-16 lg:py-20`;
+const Content = tw.div`max-w-screen-xl mx-auto md:ml-40 py-16 lg:py-20`;
 
 const TwoColumn = tw.div`flex`;
 const Column = tw.div``;
@@ -21,7 +21,7 @@ const Image = styled.div(props => [
   tw`hidden lg:block rounded h-144 bg-center`
 ]);
 
-const FAQContent = tw.div`lg:ml-12`;
+const FAQContent = tw.div`my-auto lg:ml-12`;
 const Subheading = tw(SubheadingBase)`mb-4 text-center lg:text-left`;
 const Heading = tw(SectionHeading)`lg:text-left`;
 const Description = tw.p`max-w-xl text-center mx-auto lg:mx-0 lg:text-left lg:max-w-none leading-relaxed text-sm sm:text-base lg:text-lg font-medium mt-4 text-secondary-100`;

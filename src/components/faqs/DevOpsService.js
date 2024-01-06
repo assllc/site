@@ -9,7 +9,7 @@ import { ReactComponent as MinusIcon } from "feather-icons/dist/icons/minus.svg"
 import DevOpsService from "images/undraw_solution_mindset_re_57bf.svg"
 
 const Container = tw.div`relative`;
-const Content = tw.div`max-w-screen-xl ml-auto mr-40 py-16 lg:py-20`;
+const Content = tw.div`max-w-screen-xl ml-auto md:mr-40 py-16 lg:py-20`;
 
 const TwoColumn = tw.div`flex`;
 const Column = tw.div``;

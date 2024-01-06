@@ -51,16 +51,16 @@ export default () => {
           </LogoContainer>
           <ul tw="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
                     <li>
-                        <a href="/" tw="hover:underline m-4 md:m-6">Home</a>
+                        <a href="/" tw="hover:underline mr-2 md:m-6">Home</a>
                     </li>
                     <li>
-                        <a href="/product" tw="hover:underline m-4 md:m-6">What We Offer</a>
+                        <a href="/product" tw="hover:underline mr-2 md:m-6">What We Offer</a>
                     </li>
                     <li>
-                        <a href="/about" tw="hover:underline m-4 md:m-6">About</a>
+                        <a href="/about" tw="hover:underline mr-2 md:m-6">About</a>
                     </li>
                     <li>
-                        <a href="/contact" tw="hover:underline">Contact Us</a>
+                        <a href="/contact" tw="hover:underline md:m-6">Contact Us</a>
                     </li>
                 </ul>
         </ThreeColRow>
