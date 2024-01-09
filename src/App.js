@@ -8,6 +8,7 @@ import Home from "pages/Home.js";
 import AboutUsPage from "pages/AboutUs.js";
 import ContactUsPage from "pages/ContactUs.js";
 import WhatWeOfferPage from "pages/WhatWeOfferPage.js";
+import Privacy from "pages/Privacy.js";
 
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="/about" element={<AboutUsPage/>} />
           <Route path="/contact" element={<ContactUsPage/>} />
           <Route path="/product" element={<WhatWeOfferPage/>} />
+          <Route path="/privacy" element={<Privacy/>} />
         </Routes>
       </Router>
     </>

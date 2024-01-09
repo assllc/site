@@ -40,6 +40,8 @@ const SocialLink = styled.a`
   }
 `;
 
+const PrivacyPolicy = tw.a`flex items-center hover:text-gray-500 mr-2 md:mr-4 text-sm text-gray-400`;
+
 export default () => {
   return (
     <Container>
@@ -67,7 +69,8 @@ export default () => {
           <Divider />
         <ThreeColRow>
           <CopywrightNotice>&copy; 2024 Agile Software Solutions LLC All Rights Reserved.</CopywrightNotice>
-          <SocialLinksContainer>
+          <SocialLinksContainer> 
+            <PrivacyPolicy href="/privacy">Privacy Policy</PrivacyPolicy>
             <SocialLink href="https://www.linkedin.com/company/agile-software-solutions/">
               <TfiLinkedin />
             </SocialLink>

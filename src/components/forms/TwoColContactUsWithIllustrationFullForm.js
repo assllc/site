@@ -148,6 +148,7 @@ export default ({
             {subheading && <Subheading>{subheading}</Subheading>}
             <Heading>{heading}</Heading>
             {description && <Description>{description}</Description>}
+            <Subheading tw="md:pt-4"><a href="mailto:contact@agile-software-solutions.com">contact@agile-software-solutions.com</a></Subheading>
             <Form ref={form} onSubmit={sendEmail} method={formMethod}>
               <Input type="email" name="email" placeholder="Your Email Address" required/>
               <Input type="text" name="name" placeholder="Full Name" required/>
